@@ -1,3 +1,4 @@
+import CreateComments from "../components/CreateComments";
 import CreateNote from "../components/CreateNote";
 import Notes from "../components/Notes";
 import SideBar from "../components/sideBar";
@@ -10,6 +11,7 @@ const MainPage = () => {
         <CreateNote />
         <Notes />
       </div>
+      <CreateComments />
     </div>
   );
 };

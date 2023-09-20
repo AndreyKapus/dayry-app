@@ -12,6 +12,7 @@ export const useNotes = create(
           const newNote = {
             id: uuidv4(),
             text: note,
+            comments: [],
           };
           return {
             notes: [...state.notes, newNote],

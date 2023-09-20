@@ -11,7 +11,7 @@ const MainPage = () => {
         <CreateNote />
         <Notes />
       </div>
-      <CreateComments />
+      {/* <CreateComments /> */}
     </div>
   );
 };

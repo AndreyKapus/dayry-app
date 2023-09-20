@@ -1,7 +1,16 @@
+import { useState } from "react";
 import { useNotes } from "../store/store";
+import CreateComments from "./CreateComments";
 
 const Notes = () => {
   const myNotes = useNotes((state) => state.notes);
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  console.log(myNotes);
+
+  const handleItemClick = (note) => {
+    setSelectedItem(note);
+  };
 
   const deleteNote = useNotes((state) => state.removeNote);
 
@@ -15,7 +24,7 @@ const Notes = () => {
         {myNotes &&
           myNotes.map((note) => {
             return (
-              <li key={note.id}>
+              <li key={note.id} onClick={() => handleItemClick(note)}>
                 <p>{note.text}</p>
                 <button type="button" onClick={() => handleDelete(note.id)}>
                   delete
@@ -24,6 +33,7 @@ const Notes = () => {
             );
           })}
       </ul>
+      <CreateComments currentNote={selectedItem} />
     </div>
   );
 };

@@ -25,10 +25,10 @@ const CreateComments = ({ selectedItem }) => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    addComment({
-      selectedItem: { ...selectedItem, comment: { color: color, text: text } },
-    });
+    // e.preventDefault();
+    // addComment({
+    //   selectedItem: { ...selectedItem, comment: { color: color, text: text } },
+    // });
   };
 
   return (

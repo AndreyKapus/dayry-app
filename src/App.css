@@ -16,6 +16,10 @@
   overflow: hidden;
 }
 
+.notes-container {
+  display: flex;
+}
+
 /* .App {
   text-align: center;
 }

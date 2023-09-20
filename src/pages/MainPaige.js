@@ -1,4 +1,5 @@
 import CreateNote from "../components/CreateNote";
+import Notes from "../components/Notes";
 import SideBar from "../components/sideBar";
 
 const MainPage = () => {
@@ -7,6 +8,7 @@ const MainPage = () => {
       <SideBar />
       <div>
         <CreateNote />
+        <Notes />
       </div>
     </div>
   );

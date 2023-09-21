@@ -4,10 +4,8 @@ import CommentsList from "../CommentsList/CommentsList";
 import css from "./CreateComments.module.css";
 
 const CreateComments = ({ currentNote }) => {
-  const [color, setColor] = useState(null);
-  const [text, setText] = useState(null);
-
-  // console.log(currentNote);
+  const [color, setColor] = useState("#000000");
+  const [text, setText] = useState("");
 
   const addComment = useNotes((state) => state.setComment);
 
@@ -32,6 +30,7 @@ const CreateComments = ({ currentNote }) => {
     const comment = { noteColor: color, noteText: text };
     e.preventDefault();
     addComment(comment, currentNote);
+    setText("");
   };
 
   return (
@@ -44,14 +43,16 @@ const CreateComments = ({ currentNote }) => {
           type="color"
           name="color"
           onChange={handleChange}
+          required
         />
         <textarea
           className={css.textInput}
           type="text"
           name="text"
+          value={text}
           onChange={handleChange}
           placeholder="Type comment here..."
-          required=""
+          required
         ></textarea>
         <button className={css.addCommentBtn} type="submit">
           Add New

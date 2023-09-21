@@ -11,8 +11,6 @@ const MainPage = () => {
   const [active, setActive] = useState(false);
   const myNotes = useNotes((state) => state.notes);
 
-  console.log(active);
-
   const handleItemClick = (note) => {
     setSelectedItem(note.id);
     setActive(true);

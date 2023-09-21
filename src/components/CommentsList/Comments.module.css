@@ -8,12 +8,6 @@
   margin-bottom: 20px;
 }
 
-.commentColor {
-  width: 40px;
-  height: 40px;
-  background-color: aquamarine;
-}
-
 .textArea {
   resize: none;
   padding-left: 10px;

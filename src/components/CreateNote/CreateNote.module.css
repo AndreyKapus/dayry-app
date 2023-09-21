@@ -25,7 +25,6 @@
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.notesInput:hover,
 .notesInput:focus {
   border-color: #80bdff;
   outline: 0;

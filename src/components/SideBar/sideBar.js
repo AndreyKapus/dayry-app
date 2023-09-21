@@ -3,8 +3,8 @@ import css from "./SideBar.module.css";
 const SideBar = () => {
   return (
     <div className={css.sideBarContainer}>
-      <h1>Dayry app</h1>
-      <p>Comment with no sense</p>
+      <h1 className={css.title}>dayry app</h1>
+      <p className={css.subtitle}>Comment with no sense</p>
     </div>
   );
 };

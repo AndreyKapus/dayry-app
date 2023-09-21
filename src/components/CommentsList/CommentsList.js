@@ -7,8 +7,6 @@ const CommentsList = ({ currentNote }) => {
   const [selected, setSelected] = useState(null);
   const notes = useNotes((state) => state.notes);
 
-  console.log(selected);
-
   useEffect(() => {
     const findNoteById = () => {
       const curNote = notes.find((note) => note.id === currentNote);
@@ -30,7 +28,7 @@ const CommentsList = ({ currentNote }) => {
                   height: "50px",
                 }}
               ></div>
-              <textarea className={css.textArea}>{comment.noteText}</textarea>
+              <p className={css.textArea}>{comment.noteText}</p>
             </div>
           );
         })}

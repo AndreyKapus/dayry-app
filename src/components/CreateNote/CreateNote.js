@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNotes } from "../../store/store";
-import Notes from "../Notes/Notes";
 import css from "./CreateNote.module.css";
 
 const CreateNote = () => {
@@ -16,6 +15,7 @@ const CreateNote = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     addNote(note);
+    setNote("");
   };
 
   return (
@@ -27,6 +27,7 @@ const CreateNote = () => {
           className={css.notesInput}
           type="text"
           name="note"
+          value={note}
           id="note"
           placeholder="Type name here..."
           onChange={handleChange}

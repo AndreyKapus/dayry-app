@@ -10,6 +10,9 @@
 
 .textArea {
   resize: none;
+  max-width: 500px;
   padding-left: 10px;
   border: none;
+  font-size: 87.5%;
+  color: #212529;
 }

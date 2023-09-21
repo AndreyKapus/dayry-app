@@ -25,20 +25,22 @@ const MainPage = () => {
   };
 
   return (
-    <div className={css.container}>
+    <div className={css.wrapper}>
       <SideBar />
-      <div className={css.content}>
-        <div className={css.noteCard}>
-          <CreateNote />
-          <Notes
-            myNotes={myNotes}
-            selectedItem={selectedItem}
-            handleItemClick={handleItemClick}
-            handleDelete={handleDelete}
-            active={active}
-          />
+      <div className={css.container}>
+        <div className={css.content}>
+          <div className={css.noteCard}>
+            <CreateNote />
+            <Notes
+              myNotes={myNotes}
+              selectedItem={selectedItem}
+              handleItemClick={handleItemClick}
+              handleDelete={handleDelete}
+              active={active}
+            />
+          </div>
+          <CreateComments currentNote={selectedItem} />
         </div>
-        <CreateComments currentNote={selectedItem} />
       </div>
     </div>
   );

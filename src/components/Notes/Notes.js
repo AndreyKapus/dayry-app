@@ -1,12 +1,6 @@
 import css from "./Notes.module.css";
 
-const Notes = ({
-  myNotes,
-  selectedItem,
-  handleItemClick,
-  handleDelete,
-  active,
-}) => {
+const Notes = ({ myNotes, handleItemClick, handleDelete }) => {
   return (
     <div className="notes-wrapper">
       <ul className={css.notesList}>

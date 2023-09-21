@@ -8,12 +8,10 @@ import css from "./MainPage.module.css";
 
 const MainPage = () => {
   const [selectedItem, setSelectedItem] = useState(null);
-  const [active, setActive] = useState(false);
   const myNotes = useNotes((state) => state.notes);
 
   const handleItemClick = (note) => {
     setSelectedItem(note.id);
-    setActive(true);
   };
 
   const deleteNote = useNotes((state) => state.removeNote);
@@ -34,7 +32,6 @@ const MainPage = () => {
               selectedItem={selectedItem}
               handleItemClick={handleItemClick}
               handleDelete={handleDelete}
-              active={active}
             />
           </div>
           <CreateComments currentNote={selectedItem} />

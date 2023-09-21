@@ -1,0 +1,30 @@
+.notesCardTitle {
+  text-align: left;
+  font-size: 32px;
+  font-weight: normal;
+  color: gray;
+  margin-bottom: 8px;
+}
+
+.notesForm {
+  display: flex;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.notesInput {
+  width: 100%;
+  height: 38px;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.notesInput:hover,
+.notesInput:focus {
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}

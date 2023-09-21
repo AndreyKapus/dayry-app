@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { useNotes } from "../store/store";
+import { useNotes } from "../../store/store";
+import Notes from "../Notes/Notes";
+import css from "./CreateNote.module.css";
 
 const CreateNote = () => {
   const [note, setNote] = useState("");
@@ -18,10 +20,11 @@ const CreateNote = () => {
 
   return (
     <div>
-      <h2>Items</h2>
-      <form onSubmit={handleSubmit}>
+      <h2 className={css.notesCardTitle}>Items</h2>
+      <form className={css.notesForm} onSubmit={handleSubmit}>
         <label className="visually-hidden">Note</label>
         <input
+          className={css.notesInput}
           type="text"
           name="note"
           id="note"

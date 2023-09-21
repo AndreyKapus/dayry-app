@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { useNotes } from "../store/store";
+import { useNotes } from "../../store/store";
+import CommentsList from "../CommentsList/CommentsList";
 
-const CreateComments = ({ selectedItem }) => {
+const CreateComments = ({ currentNote }) => {
   const [color, setColor] = useState(null);
   const [text, setText] = useState(null);
 
-  const addComment = useNotes((state) => state.setNote);
+  // console.log(currentNote);
+
+  const addComment = useNotes((state) => state.setComment);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,15 +28,15 @@ const CreateComments = ({ selectedItem }) => {
   };
 
   const handleSubmit = (e) => {
-    // e.preventDefault();
-    // addComment({
-    //   selectedItem: { ...selectedItem, comment: { color: color, text: text } },
-    // });
+    const comment = { noteColor: color, noteText: text };
+    e.preventDefault();
+    addComment(comment, currentNote);
   };
 
   return (
     <div>
       <h3>Comments</h3>
+      <CommentsList currentNote={currentNote} />
       <form onSubmit={handleSubmit}>
         <input type="color" name="color" onChange={handleChange} />
         <input

@@ -24,6 +24,16 @@ export const useNotes = create(
             notes: state.notes.filter((note) => note.id !== noteId),
           };
         }),
+      setComment: (comment, noteId) =>
+        set((state) => {
+          return {
+            notes: state.notes.map((note) =>
+              note.id === noteId
+                ? { ...note, comments: [...note.comments, comment] }
+                : note
+            ),
+          };
+        }),
     }),
     { name: "events-storage", storage: createJSONStorage(() => localStorage) }
   )

@@ -28,12 +28,14 @@ const CreateNote = () => {
           type="text"
           name="note"
           id="note"
-          placeholder="Type name here"
+          placeholder="Type name here..."
           onChange={handleChange}
           required
         />
 
-        <button type="submit">Add new</button>
+        <button className={css.addBtn} type="submit">
+          Add new
+        </button>
       </form>
     </div>
   );

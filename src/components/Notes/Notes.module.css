@@ -1,0 +1,26 @@
+.notes-wrapper {
+  display: flex;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.noteText {
+  margin-bottom: 0;
+}
+
+.infoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.count {
+  margin-right: 20px;
+  margin-bottom: 0;
+}

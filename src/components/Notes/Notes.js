@@ -1,6 +1,12 @@
 import css from "./Notes.module.css";
 
-const Notes = ({ myNotes, selectedItem, handleItemClick, handleDelete }) => {
+const Notes = ({
+  myNotes,
+  selectedItem,
+  handleItemClick,
+  handleDelete,
+  active,
+}) => {
   return (
     <div className="notes-wrapper">
       <ul className={css.notesList}>
@@ -15,7 +21,11 @@ const Notes = ({ myNotes, selectedItem, handleItemClick, handleDelete }) => {
                 <p className={css.noteText}>{note.text}</p>
                 <div className={css.infoWrapper}>
                   <p className={css.count}>{note.comments.length}</p>
-                  <button type="button" onClick={() => handleDelete(note.id)}>
+                  <button
+                    className={css.deleteBtn}
+                    type="button"
+                    onClick={() => handleDelete(note.id)}
+                  >
                     delete
                   </button>
                 </div>

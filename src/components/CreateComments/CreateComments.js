@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNotes } from "../../store/store";
 import CommentsList from "../CommentsList/CommentsList";
+import css from "./CreateComments.module.css";
 
 const CreateComments = ({ currentNote }) => {
   const [color, setColor] = useState(null);
@@ -34,7 +35,7 @@ const CreateComments = ({ currentNote }) => {
   };
 
   return (
-    <div>
+    <div className={css.commentsCard}>
       <h3>Comments</h3>
       <CommentsList currentNote={currentNote} />
       <form onSubmit={handleSubmit}>

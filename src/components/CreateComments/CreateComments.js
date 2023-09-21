@@ -36,18 +36,26 @@ const CreateComments = ({ currentNote }) => {
 
   return (
     <div className={css.commentsCard}>
-      <h3>Comments</h3>
+      <h3 className={css.commentsTitle}>Comments</h3>
       <CommentsList currentNote={currentNote} />
-      <form onSubmit={handleSubmit}>
-        <input type="color" name="color" onChange={handleChange} />
+      <form className={css.commentsForm} onSubmit={handleSubmit}>
         <input
+          className={css.colorPicker}
+          type="color"
+          name="color"
+          onChange={handleChange}
+        />
+        <textarea
+          className={css.textInput}
           type="text"
           name="text"
           onChange={handleChange}
           placeholder="Type comment here..."
           required=""
-        ></input>
-        <button type="submit">Add New</button>
+        ></textarea>
+        <button className={css.addCommentBtn} type="submit">
+          Add New
+        </button>
       </form>
     </div>
   );

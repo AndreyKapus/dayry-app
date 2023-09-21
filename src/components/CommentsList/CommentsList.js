@@ -22,17 +22,15 @@ const CommentsList = ({ currentNote }) => {
       {selected &&
         selected.comments.map((comment) => {
           return (
-            <div key={uuidv4()}>
+            <div className={css.commentsItem} key={uuidv4()}>
               <div
                 style={{
                   backgroundColor: `${comment.noteColor}`,
-                  width: "40px",
-                  height: "40px",
+                  width: "50px",
+                  height: "50px",
                 }}
-              >
-                {comment.noteColor}
-              </div>
-              <p>{comment.noteText}</p>
+              ></div>
+              <textarea className={css.textArea}>{comment.noteText}</textarea>
             </div>
           );
         })}

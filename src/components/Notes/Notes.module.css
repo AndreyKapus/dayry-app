@@ -2,12 +2,29 @@
   display: flex;
 }
 
+.notesList .listItem:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
 .listItem {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
   border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/* .listitem:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+} */
+
+.listItem:hover,
+.listItem:focus {
+  border-left: 4px solid deeppink;
+  /* border-top-left-radius: 6px;
+  border-top-right-radius: 6px; */
 }
 
 .noteText {

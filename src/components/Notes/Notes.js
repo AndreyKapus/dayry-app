@@ -3,7 +3,7 @@ import css from "./Notes.module.css";
 const Notes = ({ myNotes, selectedItem, handleItemClick, handleDelete }) => {
   return (
     <div className="notes-wrapper">
-      <ul>
+      <ul className={css.notesList}>
         {myNotes &&
           myNotes.map((note) => {
             return (
